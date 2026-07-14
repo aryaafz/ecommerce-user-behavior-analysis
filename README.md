@@ -43,12 +43,12 @@ The dataset contains approximately 49,000 customer records with behavioral, demo
 - ✅ Applied a tiered imputation strategy based on missing severity:
   <5% missing → global median
   5–10% missing → median within a relevant behavioral group (e.g., Discount_Usage_Rate by Membership_Tier), to preserve within-segment       patterns
-  >10% missing → group median + a missing-indicator flag column, in case missingness itself is informative
+  \>10% missing → group median + a missing-indicator flag column, in case missingness itself is informative
 - ✅ Removed invalid records rather than statistical outliers: Age outside 12–90, negative Total_Purchases, and Cart_Abandonment_Rate above 100%.
 - ✅ Trimmed the top 1% of Average_Order_Value to prevent extreme values from distorting aggregate metrics.
 - ✅ Verified no missing values remained after imputation.
 
-##📊 Exploratory & Clustering Analysis
+## 📊 Exploratory & Clustering Analysis
 
 Correlation Analysis
 
@@ -105,25 +105,25 @@ Churn & Lifetime Value by Segment
 
 1. Prioritize win-back campaigns for Low Activity Users
 
-Finding: Low Activity Users make up 41.2% of the base and churn at 39.88% — the largest concentration of preventable churn on the platform.
-Recommendation: Launch targeted re-engagement campaigns (win-back emails, personalized recommendations, limited-time incentives) specifically for this segment.
+- Finding: Low Activity Users make up 41.2% of the base and churn at 39.88% — the largest concentration of preventable churn on the platform.
+- Recommendation: Launch targeted re-engagement campaigns (win-back emails, personalized recommendations, limited-time incentives) specifically for this segment.
 
 2. Build engagement-nudging programs to move users up a tier
 
-Finding: Moving a user from Low to Moderate Activity represents a potential Lifetime Value uplift of ~$657 per user.
-Recommendation: Introduce engagement-building nudges (push notifications, login streaks, personalized content) rather than only reacting to churn after it happens.
+- Finding: Moving a user from Low to Moderate Activity represents a potential Lifetime Value uplift of ~$657 per user.
+- Recommendation: Introduce engagement-building nudges (push notifications, login streaks, personalized content) rather than only reacting to churn after it happens.
 
 3. Protect High Activity Users with a loyalty program
 
-Finding: High Activity Users have the lowest churn (19.65%) and highest LTV ($2,341.77), but are also the smallest segment (18.5%).
-Recommendation: Implement a VIP/loyalty program to protect this high-value segment, since retention cost here is likely far lower than the value at risk.
+- Finding: High Activity Users have the lowest churn (19.65%) and highest LTV ($2,341.77), but are also the smallest segment (18.5%).
+- Recommendation: Implement a VIP/loyalty program to protect this high-value segment, since retention cost here is likely far lower than the value at risk.
 
 4. Use behavioral data, not demographics, for targeting
 
-Finding: Age, tenure, and country show no meaningful difference across segments.
-Recommendation: Build targeting and early-warning systems around behavioral signals (login frequency, session duration, cart abandonment) rather than demographic filters, since demographics do not predict engagement level on this platform.
+- Finding: Age, tenure, and country show no meaningful difference across segments.
+- Recommendation: Build targeting and early-warning systems around behavioral signals (login frequency, session duration, cart abandonment) rather than demographic filters, since demographics do not predict engagement level on this platform.
 
-##🚀 Project Highlights
+## 🚀 Project Highlights
 
 ✔ End-to-end data analytics workflow, from raw data to business recommendation
 ✔ Tiered missing-value imputation strategy based on missingness severity
