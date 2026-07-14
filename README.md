@@ -27,6 +27,7 @@ Without this segmentation, retention budget risks being spent evenly across all 
 The dataset contains approximately 49,000 customer records with behavioral, demographic, and purchasing information.
 
 ### Main Features
+
 |       Category       |                       Variables                            |
 |----------------------|------------------------------------------------------------|
 | User Activity        | Login Frequency, Session Duration Avg, Pages Per Session   |
@@ -40,9 +41,9 @@ The dataset contains approximately 49,000 customer records with behavioral, demo
 
 - ✅ Checked missing values across all columns — 12 of 24 columns had missing data, ranging from 0.3% (Customer_Service_Calls) to 12% (Social_Media_Engagement_Score); no column exceeded 15%, so all rows were retained.
 - ✅ Applied a tiered imputation strategy based on missing severity:
-<5% missing → global median
-5–10% missing → median within a relevant behavioral group (e.g., Discount_Usage_Rate by Membership_Tier), to preserve within-segment patterns
->10% missing → group median + a missing-indicator flag column, in case missingness itself is informative
+  <5% missing → global median
+  5–10% missing → median within a relevant behavioral group (e.g., Discount_Usage_Rate by Membership_Tier), to preserve within-segment       patterns
+  >10% missing → group median + a missing-indicator flag column, in case missingness itself is informative
 - ✅ Removed invalid records rather than statistical outliers: Age outside 12–90, negative Total_Purchases, and Cart_Abandonment_Rate above 100%.
 - ✅ Trimmed the top 1% of Average_Order_Value to prevent extreme values from distorting aggregate metrics.
 - ✅ Verified no missing values remained after imputation.
